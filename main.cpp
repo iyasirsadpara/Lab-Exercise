@@ -1,21 +1,20 @@
 #include <iostream>
-
 using namespace std;
 
 int main()
 {
-    int i=1;
-    for(int i=1;i<101;i++)
-        if(i%5==0)
-    {
-        cout<<i<<" : firrrzz"<<endl;
+    int n,decimal,reminder,base;
+    cout<<"Enter any binary number:"<<endl;
+    cin>>n;
+    base=1;
+    decimal=0;
+    while(n>0){
+        reminder=n%10;
+        decimal=decimal+reminder*base;
+        base=base*2;
+        n=n/10;
     }
-        else if(i%3==0){
-            cout<<i<<" : buzz"<<endl;
-        }
-        else{
-            cout<<i<<endl ;
-        }
+    cout<<decimal;
 
     return 0;
 }
