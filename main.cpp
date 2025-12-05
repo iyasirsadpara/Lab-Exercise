@@ -1,33 +1,32 @@
 #include <iostream>
-#include <string>
+#include <vector>
+#include <set>
 using namespace std;
 
-string capitalizeAfterFullStop(const string& sentence) {
-    string result = "";
-    bool capitalizeNext = true;  // Flag to capitalize the next character after a full stop
+vector<int> find_common_elements(const vector<int>& arr1, const vector<int>& arr2) {
+    set<int> set1(arr1.begin(), arr1.end());
+    set<int> set2(arr2.begin(), arr2.end());
+    vector<int> common_elements;
 
-    // Loop through each character in the sentence
-    for (char ch : sentence) {
-        if (capitalizeNext && isalpha(ch)) {
-            // Capitalize the first letter after a full stop
-            result += toupper(ch);
-            capitalizeNext = false;  // Reset the flag after capitalizing
-        } else {
-            // Add the character as is
-            result += ch;
-        }
-
-        // If the character is a full stop or a space, set capitalizeNext to true
-        if (ch == '.' || ch == ' ') {
-            capitalizeNext = true;
+    for (int num : set1) {
+        if (set2.find(num) != set2.end()) {
+            common_elements.push_back(num);
         }
     }
-
-    return result;
+    return common_elements;
 }
 
 int main() {
-    string sentence = "hello world. this is a test. check full stop.it is a bright day. how are you let's go out.this is a sample sentence. the next word will be capitalized.my name is john. i am learning c++. hope you enjoy it.hello there. what is your name? i am excited to meet you.";
-    cout << capitalizeAfterFullStop(sentence) << endl;  // Output: "Hello world. This is a test. Check full stop."
+    vector<int> array1 = {1, 2, 3, 4, 5};
+    vector<int> array2 = {4, 5, 6, 7, 8};
+
+    vector<int> common_elements = find_common_elements(array1, array2);
+
+    cout << "Common elements: ";
+    for (int num : common_elements) {
+        cout << num << " ";
+    }
+    cout << endl;
+
     return 0;
 }
