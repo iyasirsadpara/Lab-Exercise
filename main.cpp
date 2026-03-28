@@ -1,41 +1,66 @@
 #include <iostream>
-#include <cstdlib>  // For rand() and srand()
-#include <ctime>    // For time()
-
 using namespace std;
 
-int main() {
-    // Seed the random number generator with the current time
-    srand(time(0));
-
-    string userChoice;
-    cout << "Choose Head or Tail: ";
-    cin >> userChoice;
-
-    // Convert user choice to lowercase to avoid case-sensitive issues
-    for (int i = 0; i < userChoice.length(); i++) {
-        userChoice[i] = tolower(userChoice[i]);
+// Function to check if the year is a leap year
+bool isLeapYear(int year) {
+    if (year % 4 == 0) {
+        if (year % 100 == 0) {
+            if (year % 400 == 0)
+                return true;  // Divisible by 400: Leap year
+            else
+                return false; // Divisible by 100 but not 400: Not a leap year
+        } else
+            return true;      // Divisible by 4 but not 100: Leap year
     }
+    return false;             // Not divisible by 4: Not a leap year
+}
 
-    // Check if the user entered a valid option
-    if (userChoice != "head" && userChoice != "tail") {
-        cout << "Invalid choice! Please enter either 'Head' or 'Tail'." << endl;
-        return 1; // Exit program with an error code
-    }
-
-    // Simulate the coin flip (0 = Head, 1 = Tail)
-    int coinFlip = rand() % 2;
-    string coinResult = (coinFlip == 0) ? "head" : "tail";
-
-    // Output the result of the coin flip
-    cout << "The coin landed on: " << (coinFlip == 0 ? "Head" : "Tail") << endl;
-
-    // Check if the user's guess matches the result
-    if (userChoice == coinResult) {
-        cout << "Congratulations! You guessed it right." << endl;
+// Function to calculate the number of days in a month
+int daysInMonth(int month, int year) {
+    if (month == 2) {
+        return isLeapYear(year) ? 29 : 28;  // February: 28 or 29 days
+    } else if (month == 4 || month == 6 || month == 9 || month == 11) {
+        return 30;  // April, June, September, November: 30 days
     } else {
-        cout << "Sorry, you guessed it wrong." << endl;
+        return 31;  // January, March, May, July, August, October, December: 31 days
     }
+}
+
+// Function to calculate age
+void calculateAge(int birthDay, int birthMonth, int birthYear, int currentDay, int currentMonth, int currentYear) {
+    int ageYears, ageMonths, ageDays;
+
+    // Adjust for leap years and days in month
+    if (currentDay < birthDay) {
+        currentDay += daysInMonth(currentMonth - 1, currentYear);
+        currentMonth--;
+    }
+    if (currentMonth < birthMonth) {
+        currentYear--;
+        currentMonth += 12;
+    }
+
+    ageYears = currentYear - birthYear;
+    ageMonths = currentMonth - birthMonth;
+    ageDays = currentDay - birthDay;
+
+    cout << "Your age is: " << ageYears << " years, " << ageMonths << " months, and " << ageDays << " days." << endl;
+}
+
+int main() {
+    int birthDay, birthMonth, birthYear;
+    int currentDay, currentMonth, currentYear;
+
+    // Input birth date
+    cout << "Enter your birth date (day month year): ";
+    cin >> birthDay >> birthMonth >> birthYear;
+
+    // Input current date
+    cout << "Enter the current date (day month year): ";
+    cin >> currentDay >> currentMonth >> currentYear;
+
+    // Calculate age
+    calculateAge(birthDay, birthMonth, birthYear, currentDay, currentMonth, currentYear);
 
     return 0;
 }
