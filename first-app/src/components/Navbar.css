@@ -1,0 +1,11 @@
+ul{
+    display: flex;
+    gap: 36px;
+    /* top: 10px; */
+    width: 98.5vw;
+    color: white;
+    font-size: 22px;
+    height: 40px;
+    background-color: rgb(42, 39, 39);
+    padding: 12px;
+}
