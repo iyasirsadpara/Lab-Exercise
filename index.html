@@ -1,13 +1,62 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>video-118</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock paper</title>
+</head>
+<body>
+    <h1>Rock paper scissor</h1>
+    <p>Choose any one option</p>
+    <button class="rock">Rock</button>
+    <button class="paper">paper</button>
+    <button class="scissor">scissor</button>
+    <button class="end">end the game</button>
+    <h2 class="score1"></h2>
+</body>
+<script>
+
+    let score={
+        win:0,
+        loss:0,
+        tie:0,
+        total:0
+    }
+    const rockbtn = document.querySelector(".rock")
+    const paperbtn = document.querySelector(".paper")
+    const scissorbtn = document.querySelector(".scissor")
+    const score1 = document.querySelector(".score1")
+    // const endbtn = document.querySelector(".end")
+
+    function computer_random(){
+        const options=["rock","paper","scissor"]
+        const random= Math.floor(Math.random()*3)
+        return options[random]
+    }
+    function play(userchoice){
+        const computer=computer_random()
+        score.total++
+        if (computer==userchoice){
+            score.tie++
+            alert("Tie game")
+        }
+        else if (computer=="rock" && userchoice=="paper" || computer=="paper" && userchoice=="scissor" ||computer=="scissor" && userchoice=="rock"){
+            score.win++
+            alert("you Win!  "+userchoice+" beat "+computer)
+        }
+        else{
+            score.loss++
+            alert("You loss! "+computer+" beat "+userchoice)
+        }
+        score1.innerHTML=`Wins: ${score.win} | Losses: ${score.loss} | Ties: ${score.tie} | total: ${score.total}`
+    }
+    rockbtn.addEventListener("click",()=>play("rock"))
+    paperbtn.addEventListener("click",()=>play("paper"))
+    scissorbtn.addEventListener("click",()=>play("scissor"))
+    // console.log(score)
+
+    // endbtn.addEventListener("click",()=>{
+    //     alert("game ended")
+    // })
+</script>
 </html>
