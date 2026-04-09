@@ -1,28 +1,17 @@
-// Write a function that converts all uppercase letters in a string to lowercase, and all lowercase letters to uppercase.
 #include <iostream>
-#include <string>
-
 using namespace std;
-string myfun(string&input){
-    string result=input;
-    for(char&ch:result){
-        if(isupper(ch)){
-            ch=tolower(ch);
-        }
-        else if(islower(ch)){
-            ch=toupper(ch);
-        }
-    }
-    return result;
-}
 
 int main()
 {
-    string input,result;
-    cout << "Enter any text:\n";
-    getline(cin,input);
-    result=myfun(input);
-    cout<<"convert text:\n"<<result;
-
+    lon g long num,counter;
+    cout<<"Enter any numbers:"<<endl;
+    cin>>num;
+    counter=0;
+    while(num>0)
+    {
+        num=num/10;
+        counter=counter+1;
+    }
+    cout<<"The digits in you enter number are: "<<counter;
     return 0;
 }
