@@ -1,0 +1,4 @@
+sentence=input("Enter any string: ")
+middle_index=len(sentence)//2
+middle_chart=sentence[middle_index]
+print(middle_chart)
