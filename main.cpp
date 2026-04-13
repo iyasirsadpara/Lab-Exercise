@@ -1,27 +1,55 @@
 #include <iostream>
 using namespace std;
 
-int main() {
-    int first=0,sec=1,next,n;
-    cout<<"Enter hoe many term you would like to print"<<endl;
-    cin>>n;
-    cout<<"fibonacci Sequence: ";
-    for(int i=0;i<n;i++){
-        if(i==0){
-            cout<<first<<"  ";
+int main()
+{
+    int row=3,col=3;
+    int input1[row][col];
+    int input2[row][col];
+    int sum[row][col];
+    cout << "Enter elements of matrix 3x3" << endl;
+    for(int i=0;i<3;i++){
+        for(int j=0;j<3;j++){
+            cout << "Enter element at position [" << i+1 << "][" <<j+1 <<"]: ";
+            cin>>input1[i][j];
         }
-        else if(i==1){
-            cout<<sec<<"  ";
+    }
+    for(int i=0;i<3;i++){
+        for(int j=0;j<3;j++){
+            cout<<input1[i][j]<<"  ";
         }
-        else{
-            next=first+sec;
-            cout<<next<<"  ";
-            first=sec;
-            sec=next;
+        cout<<endl;
+    }
+    cout<<"Enter Second Matrix Elements"<<   endl;
+    for(int i=0;i<3;i++){
+        for(int j=0;j<3;j++){
+            cout << "Enter element at position [" << i+1 << "][" <<j+1 <<"]: ";
+            cin>>input2[i][j];
         }
-
     }
 
-    return 0;
+    for(int i=0;i<3;i++){
+        for(int j=0;j<3;j++){
+            cout<<input2[i][j]<<"  ";
+        }
+    cout<<endl;
+    }
+    cout<<"Now Adding both matrix"<<endl;
 
+    for(int i=0;i<3;i++){
+        for(int j=0;j<3;j++){
+            sum[i][j]=input1[i][j]*input2[i][j];
+        }
+    }s
+
+
+    for(int i=0;i<3;i++){
+        for(int j=0;j<3;j++){
+            cout<<sum[i][j]<<"   ";
+        }
+        cout<<endl;
+    }
+
+
+    return 0;
 }
