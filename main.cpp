@@ -1,28 +1,21 @@
 #include <iostream>
-
+#include <unordered_map>
 using namespace std;
 
-int main()
-{
-    int n;
-    cout<<"Enter the size of arry: \n";
-    cin>>n;
-    int num[n];
-
-    cout<<"Enter 10 number :\n";
-    for(int i=0;i<n;i++){
-
-        cin>>num[i];
-
+void count_characters(const string& str) {
+        unordered_map<char, int> count_map;
+    for (char ch : str) {
+        count_map[ch]++;
     }
-    cout<<"You entered a following number\n";
-    cout<<"[";
-    for(int i=0;i<=n;i++){
-        cout<<num[i];
-        if(i<n-1){
-            cout<<",";
-        }
+    for (const auto& item : count_map) {
+        cout << "character: " << item.first << " times " << item.second << endl;
     }
-    cout<<"]";
+}
+
+int main() {
+    string input;
+    cout<<"Enter any Stirng: \n";
+        getline(cin,input);
+    count_characters(input);
     return 0;
 }
