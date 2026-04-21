@@ -1,21 +1,31 @@
 #include <iostream>
-#include <unordered_map>
+#include <cstdlib>
+#include <ctime>
+
 using namespace std;
 
-void count_characters(const string& str) {
-        unordered_map<char, int> count_map;
-    for (char ch : str) {
-        count_map[ch]++;
-    }
-    for (const auto& item : count_map) {
-        cout << "character: " << item.first << " times " << item.second << endl;
-    }
-}
-
 int main() {
-    string input;
-    cout<<"Enter any Stirng: \n";
-        getline(cin,input);
-    count_characters(input);
+    string arry[] = {"Head", "Tail"};
+    string userInput, input;
+    srand(time(0));
+    while (true) {
+        cout << "Flip the coin? \n 1:'yes' to flip \n 2:'no' to quit): ";
+        cin >> userInput;
+        if (userInput == "no") {
+            cout << "Thanks for playing!" << endl;
+            break;
+        }
+        if (userInput == "yes") {
+            int flip = rand() % 2;
+            cout << "Guess Head or Tail: ";
+            cin >> input;
+            if (input == arry[flip]) {
+                cout << "Congratulations! You win!" << endl;
+            } else {
+                cout << "You lost!.The machine chose: " << arry[flip] << "." << endl;
+            }
+        }
+    }
+
     return 0;
 }
