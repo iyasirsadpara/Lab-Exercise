@@ -1,30 +1,37 @@
+//Write a function to find if there exists a pair whose sum is equal to the given target. You may need to consider edge cases where there are no valid pairs.
 #include <iostream>
-#include <cstdlib>
-#include <ctime>
+#include <vector>
 
 using namespace std;
-
-int main() {
-    string arry[] = {"Head", "Tail"};
-    string userInput, input;
-    srand(time(0));
-    while (true) {
-        cout << "Flip the coin? \n 1:'yes' to flip \n 2:'no' to quit): ";
-        cin >> userInput;
-        if (userInput == "no") {
-            cout << "Thanks for playing!" << endl;
-            break;
-        }
-        if (userInput == "yes") {
-            int flip = rand() % 2;
-            cout << "Guess Head or Tail: ";
-            cin >> input;
-            if (input == arry[flip]) {
-                cout << "Congratulations! You win!" << endl;
-            } else {
-                cout << "You lost!.The machine chose: " << arry[flip] << "." << endl;
+bool sum(const vector<int>& arr, int target) {
+    int n = arr.size();
+    for (int i = 0; i < n; i++) {
+        for (int j = i + 1; j < n; j++) {
+            if (arr[i] + arr[j] == target) {
+                return true;
             }
         }
+    }
+
+    return false;
+}
+
+int main() {
+    int n, target;
+    cout << "Enter the size of the array: ";
+    cin >> n;
+    vector<int> arr(n);
+    for (int i = 0; i < n; i++) {
+        cout<<"Enter elements at ["<<i+1<<"] =";
+        cin >>arr[i];
+    }
+
+    cout << "Enter the target sum: ";
+    cin >> target;
+    if (sum(arr, target)) {
+        cout << "There exists a pair whose sum is =" << target << endl;
+    } else {
+        cout << "No such pair exists." << endl;
     }
 
     return 0;
