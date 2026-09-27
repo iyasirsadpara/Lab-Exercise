@@ -1,0 +1,14 @@
+nav{
+    width: 100vw;
+    height: auto;
+    background-color: rgb(140, 100, 100);
+    display: flex;
+}
+.navmain{
+    padding: 10px 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
