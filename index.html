@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Css/output.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=home,search,notifications,mail,auto_awesome,list_alt,bookmark,groups,workspace_premium,person,more_horiz" />
+</head>
+
+<body class=" bg-black text-white">
+    <div class="mx-auto flex min-h-screen w-full max-w-7xl justify-center">
+        <div class="first-600 min-h-screen w-40 shrink-0 border-r border-neutral-800">
+            <div class="logo invert flex h-12 items-center justify-center">
+                <svg class="w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                    fill="black">
+                    <path
+                        d="M18.244 2.25h3.308l-7.227 8.26L22.827 21.75h-6.56l-5.144-6.727-5.889 6.727H1.925l7.73-8.835L1.254 2.25H7.98l4.65 6.147L18.244 2.25ZM17.083 19.52h1.833L7.084 4.374H5.117L17.083 19.52Z" />
+                </svg>
+            </div>
+            <div class="sidebar">
+                <ul class="flex flex-col gap-0.5 px-2 text-[11px]">
+                    <li class="flex cursor-pointer items-center gap-3 rounded-full px-2 py-1.5 font-bold transition-colors hover:bg-white/10">
+                        <span class="material-symbols-outlined text-[17px]">home</span>Home</li>
+                    <li class="flex cursor-pointer items-center gap-3 rounded-full px-2 py-1.5 transition-colors hover:bg-white/10">
+                        <span class="material-symbols-outlined text-[17px]">search</span>Explore</li>
+                    <li class="flex cursor-pointer items-center gap-3 rounded-full px-2 py-1.5 transition-colors hover:bg-white/10">
+                        <span class="material-symbols-outlined text-[17px]">notifications</span>Notifications</li>
+                    <li class="flex cursor-pointer items-center gap-3 rounded-full px-2 py-1.5 transition-colors hover:bg-white/10">
+                        <span class="material-symbols-outlined text-[17px]">mail</span>Messages</li>
+                    <li class="flex cursor-pointer items-center gap-3 rounded-full px-2 py-1.5 transition-colors hover:bg-white/10">
+                        <span class="material-symbols-outlined text-[17px]">auto_awesome</span>Grok</li>
+                    <li class="flex cursor-pointer items-center gap-3 rounded-full px-2 py-1.5 transition-colors hover:bg-white/10">
+                        <span class="material-symbols-outlined text-[17px]">list_alt</span>Lists</li>
+                    <li class="flex cursor-pointer items-center gap-3 rounded-full px-2 py-1.5 transition-colors hover:bg-white/10">
+                        <span class="material-symbols-outlined text-[17px]">bookmark</span>Bookmarks</li>
+                    <li class="flex cursor-pointer items-center gap-3 rounded-full px-2 py-1.5 transition-colors hover:bg-white/10">
+                        <span class="material-symbols-outlined text-[17px]">groups</span>Communities</li>
+                    <li class="flex cursor-pointer items-center gap-3 rounded-full px-2 py-1.5 transition-colors hover:bg-white/10">
+                        <span class="material-symbols-outlined text-[17px]">workspace_premium</span>Premium</li>
+                    <li class="flex cursor-pointer items-center gap-3 rounded-full px-2 py-1.5 transition-colors hover:bg-white/10">
+                        <span class="material-symbols-outlined text-[17px]">person</span>Profile</li>
+                    <li class="flex cursor-pointer items-center gap-3 rounded-full px-2 py-1.5 transition-colors hover:bg-white/10">
+                        <span class="material-symbols-outlined text-[17px]">more_horiz</span>More</li>
+                </ul>
+                <button class="mx-6 mt-2 flex w-[calc(100%-3rem)] items-center justify-center rounded-full bg-[#1d9bf0] py-2 text-[10px] font-bold transition-colors hover:bg-[#1a8cd8]">
+                    Post
+                </button>
+            </div>
+
+        </div>
+        <div class="second-800 min-h-screen w-full max-w-[600px] flex-1 border-x border-neutral-800">
+            <header class="sticky top-0 z-20 border-b border-neutral-800 bg-black/85 backdrop-blur-xl">
+                <div class="relative flex items-center">
+                    <div class="flex w-full">
+                        <button class="flex-1 py-4 text-center text-base font-bold text-white transition-colors hover:bg-white/5">
+                            <span class="relative after:absolute after:-bottom-4 after:left-1/2 after:h-1 after:w-12 after:-translate-x-1/2 after:rounded-full after:bg-[#1d9bf0]">
+                                For You
+                            </span>
+                        </button>
+                        <button class="flex-1 py-4 text-center text-base font-bold text-neutral-500 transition-colors hover:bg-white/5">
+                            Following
+                        </button>
+                    </div>
+                    <button class="absolute right-3 top-1/2 -translate-y-1/2 rounded-full p-2 text-neutral-400 transition-colors hover:bg-white/5 hover:text-white">
+                        <span class="material-symbols-outlined text-lg">settings</span>
+                    </button>
+                </div>
+            </header>
+
+            <div class="whatishapp flex gap-3 border-b border-neutral-800 px-4 py-3">
+                <div class="mt-1 h-12 w-12 shrink-0 overflow-hidden rounded-full">
+                    <img class="h-full w-full object-cover" src="https://pbs.twimg.com/profile_images/1522060025854066688/IZs_lylH_bigger.png" alt="Profile avatar">
+                </div>
+                <div class="flex-1">
+                    <textarea class="h-14 w-full resize-none bg-transparent px-0 py-3 text-[1.1rem] leading-6 text-white placeholder:text-neutral-500 focus:outline-none" placeholder="What is happening?!"></textarea>
+
+                    <div class="flex items-center gap-2 pb-3 text-sm font-semibold text-[#1d9bf0]">
+                        <span class="material-symbols-outlined text-base">globe_asia</span>
+                        <span>Everyone can reply</span>
+                    </div>
+
+                    <div class="h-px w-full bg-neutral-800"></div>
+
+                    <div class="mt-3 flex items-center justify-between gap-3">
+                        <div class="flex items-center gap-2 text-[#1d9bf0] sm:gap-3">
+                            <span class="material-symbols-outlined cursor-pointer rounded-full p-2 text-lg transition-colors hover:bg-[#1d9bf0]/10">image</span>
+                            <span class="material-symbols-outlined cursor-pointer rounded-full p-2 text-lg transition-colors hover:bg-[#1d9bf0]/10">gif</span>
+                            <span class="material-symbols-outlined cursor-pointer rounded-full p-2 text-lg transition-colors hover:bg-[#1d9bf0]/10">ballot</span>
+                            <span class="material-symbols-outlined cursor-pointer rounded-full p-2 text-lg transition-colors hover:bg-[#1d9bf0]/10">sentiment_satisfied</span>
+                            <span class="material-symbols-outlined cursor-pointer rounded-full p-2 text-lg transition-colors hover:bg-[#1d9bf0]/10">calendar_month</span>
+                            <span class="material-symbols-outlined cursor-pointer rounded-full p-2 text-lg transition-colors hover:bg-[#1d9bf0]/10">pin_drop</span>
+                        </div>
+
+                        <button class="rounded-full bg-[#1d9bf0] px-5 py-2 text-sm font-bold text-white opacity-90 transition-colors hover:bg-[#1a8cd8]">
+                            Post
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="posts">
+                <article class="post border-b border-neutral-800 px-4 py-3">
+                    <div class="flex gap-3">
+                        <div class="mt-1 h-12 w-12 shrink-0 overflow-hidden rounded-full">
+                            <img class="h-full w-full object-cover" src="https://pbs.twimg.com/profile_images/1697299503198646273/GTnwCVUC_x96.jpg" alt="Elon Musk avatar">
+                        </div>
+                        <div class="min-w-0 flex-1">
+                            <div class="flex items-center gap-1 text-[15px]">
+                                <span class="font-bold text-white hover:underline">Elon Musk</span>
+                                <span class="text-neutral-500">@ElonMusk</span>
+                                <span class="text-neutral-500">·</span>
+                                <span class="text-neutral-500">6h</span>
+                            </div>
+                            <p class="mt-1 text-[15px] leading-6 text-white">
+                                I spent $44 billion for this app and now Lizard boy just decided to hit copy and paste.
+                                <br><br>
+                                It’s personal now.
+                                <br><br>
+                                See you in the cage, Zuck.
+                            </p>
+                            <div class="mt-4 flex items-center justify-between max-w-[420px] text-sm text-neutral-500">
+                                <div class="flex items-center gap-2 rounded-full p-1 hover:bg-[#1d9bf0]/10 hover:text-[#1d9bf0]">
+                                    <span class="material-symbols-outlined text-[18px]">chat_bubble</span>
+                                    <span>1k</span>
+                                </div>
+                                <div class="flex items-center gap-2 rounded-full p-1 hover:bg-[#17bf63]/10 hover:text-[#17bf63]">
+                                    <span class="material-symbols-outlined text-[18px]">repeat</span>
+                                    <span>1k</span>
+                                </div>
+                                <div class="flex items-center gap-2 rounded-full p-1 hover:bg-[#f91880]/10 hover:text-[#f91880]">
+                                    <span class="material-symbols-outlined text-[18px]">favorite</span>
+                                    <span>1k</span>
+                                </div>
+                                <div class="flex items-center gap-2 rounded-full p-1 hover:bg-[#1d9bf0]/10 hover:text-[#1d9bf0]">
+                                    <span class="material-symbols-outlined text-[18px]">bar_chart</span>
+                                    <span>1k</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="post border-b border-neutral-800 px-4 py-3">
+                    <div class="flex gap-3">
+                        <div class="mt-1 h-12 w-12 shrink-0 overflow-hidden rounded-full">
+                            <img class="h-full w-full object-cover" src="https://pbs.twimg.com/profile_images/1522060025854066688/IZs_lylH_bigger.png" alt="CodeWithHarry avatar">
+                        </div>
+                        <div class="min-w-0 flex-1">
+                            <div class="flex items-center gap-1 text-[15px]">
+                                <span class="font-bold text-white hover:underline">CodeWithHarry</span>
+                                <span class="text-neutral-500">@CodeWithHarry</span>
+                                <span class="text-neutral-500">·</span>
+                                <span class="text-neutral-500">6h</span>
+                            </div>
+                            <p class="mt-1 text-[15px] leading-6 text-white">Living legend</p>
+                            <div class="mt-3 overflow-hidden rounded-2xl border border-neutral-800">
+                                <img class="w-full object-cover" src="https://pbs.twimg.com/media/GEGqnodacAAoyCO?format=jpg&name=900x900" alt="Post image">
+                            </div>
+                            <div class="mt-4 flex items-center justify-between max-w-[420px] text-sm text-neutral-500">
+                                <div class="flex items-center gap-2 rounded-full p-1 hover:bg-[#1d9bf0]/10 hover:text-[#1d9bf0]">
+                                    <span class="material-symbols-outlined text-[18px]">chat_bubble</span>
+                                    <span>1k</span>
+                                </div>
+                                <div class="flex items-center gap-2 rounded-full p-1 hover:bg-[#17bf63]/10 hover:text-[#17bf63]">
+                                    <span class="material-symbols-outlined text-[18px]">repeat</span>
+                                    <span>1k</span>
+                                </div>
+                                <div class="flex items-center gap-2 rounded-full p-1 hover:bg-[#f91880]/10 hover:text-[#f91880]">
+                                    <span class="material-symbols-outlined text-[18px]">favorite</span>
+                                    <span>1k</span>
+                                </div>
+                                <div class="flex items-center gap-2 rounded-full p-1 hover:bg-[#1d9bf0]/10 hover:text-[#1d9bf0]">
+                                    <span class="material-symbols-outlined text-[18px]">bar_chart</span>
+                                    <span>1k</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="post border-b border-neutral-800 px-4 py-3">
+                    <div class="flex gap-3">
+                        <div class="mt-1 h-12 w-12 shrink-0 overflow-hidden rounded-full">
+                            <img class="h-full w-full object-cover" src="https://pbs.twimg.com/profile_images/1724504100136439808/J8k8HnSD_bigger.png" alt="Meme avatar">
+                        </div>
+                        <div class="min-w-0 flex-1">
+                            <div class="flex items-center gap-1 text-[15px]">
+                                <span class="font-bold text-white hover:underline">non aesthetic things</span>
+                                <span class="text-neutral-500">@CodeMeme</span>
+                                <span class="text-neutral-500">·</span>
+                                <span class="text-neutral-500">6h</span>
+                            </div>
+                            <p class="mt-1 text-[15px] leading-6 text-white">This is amazing coding meme</p>
+                            <div class="mt-3 overflow-hidden rounded-2xl border border-neutral-800">
+                                <img class="w-full object-cover" src="https://s3.amazonaws.com/rails-camp-tutorials/blog/programming+memes/works-doesnt-work.jpg" alt="Coding meme">
+                            </div>
+                            <div class="mt-4 flex items-center justify-between max-w-[420px] text-sm text-neutral-500">
+                                <div class="flex items-center gap-2 rounded-full p-1 hover:bg-[#1d9bf0]/10 hover:text-[#1d9bf0]">
+                                    <span class="material-symbols-outlined text-[18px]">chat_bubble</span>
+                                    <span>1k</span>
+                                </div>
+                                <div class="flex items-center gap-2 rounded-full p-1 hover:bg-[#17bf63]/10 hover:text-[#17bf63]">
+                                    <span class="material-symbols-outlined text-[18px]">repeat</span>
+                                    <span>1k</span>
+                                </div>
+                                <div class="flex items-center gap-2 rounded-full p-1 hover:bg-[#f91880]/10 hover:text-[#f91880]">
+                                    <span class="material-symbols-outlined text-[18px]">favorite</span>
+                                    <span>1k</span>
+                                </div>
+                                <div class="flex items-center gap-2 rounded-full p-1 hover:bg-[#1d9bf0]/10 hover:text-[#1d9bf0]">
+                                    <span class="material-symbols-outlined text-[18px]">bar_chart</span>
+                                    <span>1k</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <aside class="third hidden w-87.5 shrink-0 border-l border-neutral-800 px-4 py-3 lg:block">
+            <div class="sticky top-0 z-10 bg-black py-1">
+                <label class="relative block">
+                    <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-lg text-neutral-500">search</span>
+                    <input type="search" aria-label="Search" placeholder="Search"
+                        class="w-full rounded-full border border-transparent bg-[#202327] py-3 pl-12 pr-4 text-sm text-white outline-none transition-colors placeholder:text-neutral-500 focus:border-sky-500 focus:bg-black">
+                </label>
+            </div>
+
+            <section class="mt-4 overflow-hidden rounded-2xl border border-neutral-800 bg-[#16181c]">
+                <h2 class="px-4 py-3 text-xl font-extrabold">What's happening</h2>
+                <div class="flex cursor-pointer items-start justify-between px-4 py-3 transition-colors hover:bg-white/5">
+                    <div>
+                        <p class="text-xs text-neutral-500">Technology · Trending</p>
+                        <p class="font-bold">#TailwindCSS</p>
+                        <p class="text-xs text-neutral-500">2,483 posts</p>
+                    </div>
+                    <span class="material-symbols-outlined text-lg text-neutral-500">more_horiz</span>
+                </div>
+                <div class="flex cursor-pointer items-start justify-between px-4 py-3 transition-colors hover:bg-white/5">
+                    <div>
+                        <p class="text-xs text-neutral-500">Technology · Trending</p>
+                        <p class="font-bold">#WebDevelopment</p>
+                        <p class="text-xs text-neutral-500">8,916 posts</p>
+                    </div>
+                    <span class="material-symbols-outlined text-lg text-neutral-500">more_horiz</span>
+                </div>
+                <div class="flex cursor-pointer items-start justify-between px-4 py-3 transition-colors hover:bg-white/5">
+                    <div>
+                        <p class="text-xs text-neutral-500">Technology · Trending</p>
+                        <p class="font-bold">#ReactJS</p>
+                        <p class="text-xs text-neutral-500">1,204 posts</p>
+                    </div>
+                    <span class="material-symbols-outlined text-lg text-neutral-500">more_horiz</span>
+                </div>
+                <a href="#" class="block px-4 py-4 text-sm text-sky-500 transition-colors hover:bg-white/5">Show more</a>
+            </section>
+
+            <section class="mt-4 overflow-hidden rounded-2xl border border-neutral-800 bg-[#16181c]">
+                <h2 class="px-4 py-3 text-xl font-extrabold">Who to follow</h2>
+                <div class="flex items-center justify-between gap-2 px-4 py-3 transition-colors hover:bg-white/5">
+                    <div class="flex min-w-0 items-center gap-3">
+                        <img class="h-10 w-10 rounded-full" src="https://avatars.githubusercontent.com/u/14957082?s=96&v=4" alt="OpenAI">
+                        <div class="min-w-0">
+                            <p class="truncate text-sm font-bold hover:underline">OpenAI</p>
+                            <p class="truncate text-sm text-neutral-500">@OpenAI</p>
+                        </div>
+                    </div>
+                    <button class="shrink-0 rounded-full bg-white px-4 py-1.5 text-sm font-bold text-black transition-colors hover:bg-blue-400 ">Follow</button>
+                </div>
+                <div class="flex items-center justify-between gap-2 px-4 py-3 transition-colors hover:bg-white/5">
+                    <div class="flex min-w-0 items-center gap-3">
+                        <img class="h-10 w-10 rounded-full" src="https://avatars.githubusercontent.com/u/9919?s=96&v=4" alt="GitHub">
+                        <div class="min-w-0">
+                            <p class="truncate text-sm font-bold hover:underline">GitHub</p>
+                            <p class="truncate text-sm text-neutral-500">@github</p>
+                        </div>
+                    </div>
+                    <button class="shrink-0 rounded-full bg-white px-4 py-1.5 text-sm font-bold text-black transition-colors hover:bg-blue-400 ">Follow</button>
+                </div>
+                <div class="flex items-center justify-between gap-2 px-4 py-3 transition-colors hover:bg-white/5">
+                    <div class="flex min-w-0 items-center gap-3">
+                        <img class="h-10 w-10 rounded-full" src="https://pbs.twimg.com/profile_images/989513875124117504/UNMIb20k_bigger.jpg" alt="shadcn">
+                        <div class="min-w-0">
+                            <p class="truncate text-sm font-bold hover:underline">shadcn</p>
+                            <p class="truncate text-sm text-neutral-500">@shadcn</p>
+                        </div>
+                    </div>
+                    <button class="shrink-0 rounded-full bg-white px-4 py-1.5 text-sm font-bold text-black transition-colors hover:bg-blue-400 ">Follow</button>
+                </div>
+                <a href="#" class="block px-4 py-4 text-sm text-sky-500 transition-colors hover:bg-white/5">Show more</a>
+            </section>
+
+            <footer class="px-4 py-4 text-xs leading-5 text-neutral-500">
+                <a href="#" class="mr-2 hover:underline">Terms of Service</a>
+                <a href="#" class="mr-2 hover:underline">Privacy Policy</a>
+                <a href="#" class="mr-2 hover:underline">Cookie Policy</a>
+                <a href="#" class="mr-2 hover:underline">Accessibility</a>
+                <a href="#" class="mr-2 hover:underline">Ads info</a>
+                <a href="#" class="mr-2 hover:underline">More</a>
+                <span>© 2026 X Corp.</span>
+            </footer>
+        </aside>
+    </div>
+</body>
+
+</html>

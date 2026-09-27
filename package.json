@@ -1,0 +1,21 @@
+{
+  "name": "twitter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwindcss -i ./Css/input.css -o ./Css/output.css",
+    "watch:css": "tailwindcss -i ./Css/input.css -o ./Css/output.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.3"
+  },
+  "devDependencies": {
+    "tailwindcss": "^4.3.3"
+  }
+}
